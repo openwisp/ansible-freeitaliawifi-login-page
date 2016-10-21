@@ -1,0 +1,50 @@
+fiw_login_path: /var/www/freeitaliawifi-login-page
+fiw_login_theme: default
+fiw_login_title: WiFi Login
+fiw_login_menu:
+  - text_it: Free ItaliaWifi
+    text_en: Free ItaliaWifi
+    href: http://www.freeitaliawifi.it
+  - text_it: OpenWISP
+    text_en: OpenWISP
+    href: http://openwisp.org
+fiw_login_form_action: null
+fiw_login_logo2: false
+fiw_signup: null
+fiw_reset_password: null
+fiw_manage_account: null
+fiw_pfsense_zone: null
+fiw_redirurl: http://www.cittametropolitanaroma.gov.it/
+fiw_hidden_fields:
+  - name: zone
+    value: "{{ fiw_pfsense_zone}}"
+  - name: accept
+    value: accept
+  - name: redirurl
+    value: "{{ fiw_redirurl}}"
+fiw_contact_box: true
+fiw_contact_links:
+  - label: E-mail
+    text: wifi@wifiservice.example
+    href: mailto:wifi@wifi@wifiservice.example
+  - label: Helpdesk
+    text: 06 00.00.0000
+    href: tel:+3906000000
+fiw_facebook: https://www.facebook.com/OpenWISP/
+fiw_twitter: https://twitter.com/openwisp
+fiw_feedr_host: feedr.publicwifi.it
+fiw_news_rss: null
+fiw_service_rss: null
+fiw_related_links:
+  - href: http://www.freeitaliawifi.it/
+    src: images/fiw.png
+    alt: FreeItaliaWifi
+  - href: http://www.openwisp.org/
+    src: images/openwisp.jpg
+    alt: OpenWISP
+  - href: http://www.cineca.it/
+    src: images/cineca.jpg
+    alt: Cineca
+fiw_privacy: "#"
+fiw_eula: "#"
+fiw_realm_json: https://opendata.publicwifi.it/freeitaliawifi/realms.json

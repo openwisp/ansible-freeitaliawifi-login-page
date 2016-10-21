@@ -1,0 +1,8 @@
+- include: apt.yml
+  tags: [fiw, apt]
+
+- include: static.yml
+  tags: [fiw, static]
+
+- include: minification.yml
+  tags: [fiw, minification]

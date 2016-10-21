@@ -1,0 +1,9 @@
+- name: Update APT package cache
+  apt: update_cache=yes
+
+- name: Install pip via apt
+  apt: name={{ item }} state=latest
+  notify: reload systemd
+  with_items:
+    - python-software-properties
+    - python-pip

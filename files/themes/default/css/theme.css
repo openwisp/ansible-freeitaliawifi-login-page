@@ -1,0 +1,21 @@
+#header, .overlay{
+    background-color: #ccc;
+    color: #fff;
+}
+
+body, #menu, #footer{ background-color: #555; color: #fff }
+.box{ background-color: #eee; color: #000 }
+
+#login{ background-color: #d3d3d3 }
+
+#content a{ color: #000 }
+#content a:hover,
+#footer a:hover{ text-decoration: none }
+#content a.button, #content button{
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#content a.button:hover, #content button:hover{
+    background-color: rgba(0, 0, 0, 0.7);
+}
+#footer, #footer a{ color: #fff }

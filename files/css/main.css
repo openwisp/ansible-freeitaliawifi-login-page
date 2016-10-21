@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat-Regular'), url(../fonts/montserrat-400.woff2) format('woff2'), url(../fonts/montserrat-400.woff) format('woff');
+}
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat-Bold'), url(../fonts/montserrat-700.woff2) format('woff2'), url(../fonts/montserrat-700.woff) format('woff');
+}
+
+body{
+    font-size: 14px;
+    font-family: 'Montserrat', sans-serif;
+    min-width: 350px;
+}
+
+body, ul, li, div, p{ margin: 0; padding: 0 }
+.table{ display: table; width: 100% }
+.table-cell{ display: table-cell; vertical-align: middle }
+.inner{ margin: 0 auto }
+
+#content div, #content ul{ margin-bottom: 2.5%; }
+#menu{ margin-bottom: 0 !important }
+#content{
+    padding-top: 2.5%;
+    overflow: hidden;
+    background-color: #fff;
+}
+#header{ overflow: hidden }
+#header img{ vertical-align: middle; padding: 20px }
+#footer{
+    padding: 20px 0;
+    clear: both;
+    overflow: hidden;
+}
+
+#logo{ position: relative }
+#lang a,
+#lang-mobile a{ padding: 8px 12px 8px 39px }
+#lang-mobile h4{ margin: 0 0 20px }
+#lang-mobile{ margin-top: 35px }
+#lang-mobile .close{
+    display: block;
+    position: static;
+    width: 25%;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 40px auto;
+}
+
+.it, .en{
+    background-position: 12px center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+}
+.it{ background-image: url(../images/ita.png) }
+.en{ background-image: url(../images/uk.png) }
+
+#menu{ padding: 10px 0 }
+#menu li{
+    list-style: outside none;
+    display: inline-block;
+}
+#lang-mobile{ display: none }
+
+#menu li a,
+a.button, button{
+    display: inline-block;
+    padding: 8px 15px;
+    margin-right: 5px;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.3);
+    border: 0 none;
+    cursor: pointer;
+}
+#login button, #login .button{
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+    box-sizing: border-box;
+}
+#header .lang{ background-color: rgba(0, 0, 0, 0.2) }
+#menu li a:hover,
+.button:hover,
+#header .lang:hover{ background-color: rgba(0, 0, 0, 0.5) }
+.active{
+    cursor: default !important;
+    background-color: rgba(0, 0, 0, 0.6) !important
+}
+
+#login{
+    float: left;
+    clear: left;
+    width: 53%;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+label{
+    display: block;
+}
+
+input, select{
+    width: 100%;
+    height: 33px;
+    line-height: 40px;
+    padding: 0 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    background-color: #fff;
+    color: #000;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.box{
+    box-sizing: border-box;
+    border-radius: 2px;
+    padding: 3%;
+    line-height: 25px
+}
+
+.center{ text-align: center }
+#content .spacing{ margin: 20px 0 }
+#content p{ margin-bottom: 10px }
+.overlay p{ margin-bottom: 20px }
+#content p:last-child,
+.overlay p:last-child{ margin-bottom: 0 }
+
+#social a{ text-decoration: none }
+#social img{ margin-right: 15px }
+#social{ margin-bottom: -5px !important }
+
+#related { text-align: center }
+#related a{ margin-right: 10px; text-decoration: none }
+
+#help-fiw{
+    font-weight: bold;
+    float: right;
+    font-size: 14px;
+}
+
+#news{ min-height: 230px }
+#news a,
+#publicwifi a{ font-weight: bold }
+.date{ font-size: 13px; font-style: italic }
+
+#footer{ line-height: 25px }
+
+#publicwifi p{
+    width: 50%;
+    padding: 0 2%;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    float: left;
+}
+
+#notes{
+    clear: both;
+    text-align: center;
+    font-size: 14px
+}
+#notes a{ margin: 0 5px }
+
+.overlay{
+    display: none;
+    box-sizing: border-box;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 3% 10%;
+    font-size: 16px;
+    line-height: 25px;
+    overflow: auto;
+}
+#overlay-loading{ display: table }
+.close{ position: absolute; top: 0; right: 0 }
+.overlay .close{ margin: 3% }
+.button.close{
+    padding: 5px 15px;
+}
+#lang{ text-align: right }
+
+/* SMALL SCREENS */
+@media screen and (min-width: 0px) and (max-width: 767px){
+    #container{ width: 100%; position: relative; }
+    #lang{ clear: both }
+    #login{ float: none; width: auto }
+    #content .box{ margin-bottom: 0; border-radius: 0 }
+    #header img{ padding: 10px 20px }
+    #toggle-menu{
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 15px;
+        margin: 25px 15px;
+    }
+    #toggle-menu span{ font-size: 16px; margin-right: 5px }
+    #logo2{ width: 70%; margin: 0 auto !important }
+    #menu{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0
+    }
+    #content{ padding-top: 0 }
+    #menu li, #menu li a{ display: block }
+    #menu li a{
+        padding: 15px 15px;
+        margin: 0;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    a.button{ display: block; padding: 10px 15px }
+    .box, #footer{ padding-left: 5%; padding-right: 5% }
+    #lang{ display: none }
+    #lang-mobile{ display: block }
+    #lang-mobile a{
+        display: inline;
+        margin: 0 5px
+    }
+    #related{ margin: 5% 0 4.5% !important }
+    #related img{ height: 70px }
+    #news{
+        padding-top: 0;
+        min-height: auto
+    }
+    #publicwifi p{
+        width: auto;
+        float: none;
+    }
+    .overlay .button{ margin-bottom: 20px }
+    #content .spacing{ margin: 0 0 10px }
+}
+
+/* LARGE SCREENS */
+@media screen and (min-width: 767px){
+    .inner{ max-width: 1000px }
+    #toggle-menu{ display: none }
+    #news, #contacts, #related{
+        float: right;
+        clear: right;
+        width: 44%;
+    }
+    #menu, #service{ clear: both }
+    #content { padding-top: 27px }
+}
+
+/* minor corrections for medium sized screens */
+@media screen and (min-width: 767px) and (max-width: 1000px){
+    .inner{ margin: 0 1% }
+    #login, #contacts, #news, #related{
+        margin-bottom: 1% !important
+    }
+    #content{ padding-top: 1% }
+    #login{ width: 54% }
+    #news, #contacts, #related{ width: 45% }
+}
