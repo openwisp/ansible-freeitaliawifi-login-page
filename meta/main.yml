@@ -1,0 +1,19 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: nemesisdesign
+  description: standard login page for Free ItaliaWifi federated networks
+  license: MIT
+  platforms:
+  - name: Debian
+    versions:
+    - wheezy
+    - jessie
+  - name: Ubuntu
+    versions:
+    - trusty
+    - xenial
+  categories:
+    - networking
