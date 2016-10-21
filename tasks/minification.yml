@@ -22,9 +22,6 @@
 - name: Add moment.min.js to bundle.js
   shell: "slimit {{ fiw_login_path }}/js/moment.min.js >> {{ fiw_login_path }}/build/bundle.js"
 
-- name: Add moment.min.js to bundle.js
-  shell: "slimit {{ fiw_login_path }}/js/moment.min.js >> {{ fiw_login_path }}/build/bundle.js"
-
 - name: Add main.js to bundle.js
   shell: "slimit {{ fiw_login_path }}/js/main.js >> {{ fiw_login_path }}/build/bundle.js"
 
