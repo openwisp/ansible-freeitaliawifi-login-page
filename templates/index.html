@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>{{ fiw_login_title }}</title>
+    <title>{{ fiw_title }}</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <link href="build/bundle.css" rel="stylesheet">
@@ -18,7 +18,7 @@
         <div class="inner">
             <div class="table">
                 <p class="table-cell">
-                    <img src="themes/{{ fiw_login_theme }}/images/logo1.png" alt="">
+                    <img src="themes/{{ fiw_theme }}/images/logo1.png" alt="">
                 </p>
                 <p class="table-cell" id="lang">
                     <a href="javascript:translate('it')" class="button it active lang">
@@ -34,9 +34,9 @@
     </div>
     <div id="menu">
         <div class="inner">
-            {% if fiw_login_menu %}
+            {% if fiw_menu %}
             <ul>
-                {% for item in fiw_login_menu %}
+                {% for item in fiw_menu %}
                 <li>
                     <a href="{{ item.href }}" class="t">{{ item.text_en }}</a>
                 </li>
@@ -60,10 +60,10 @@
     <div id="content">
         <div class="inner">
             <div id="login" class="box">
-                <form action="{{ fiw_login_form_action }}" method="post" name="userauth">
-                    {% if fiw_login_logo2 %}
+                <form action="{{ fiw_form_action }}" method="post" name="userauth">
+                    {% if fiw_logo2 %}
                     <p class="center" id="logo2">
-                        <img src="themes/{{ fiw_login_theme }}/images/logo2.png" alt="">
+                        <img src="themes/{{ fiw_theme }}/images/logo2.png" alt="">
                     </p>
                     {% endif %}
                     <p>
@@ -177,7 +177,7 @@
         var i18n = {
             "current": (window.navigator.language || window.navigator.userLanguage).substr(0, 2),
             "it": {
-                {% for link in fiw_login_menu %}
+                {% for link in fiw_menu %}
                 "{{ link.text_en }}": "{{ link.text_it }}",
                 {% endfor %}
                 "Sign up for free": "Registrati gratuitamente",

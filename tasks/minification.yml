@@ -8,22 +8,22 @@
     - htmlmin
 
 - name: Minify main.css and move it to build dir
-  shell: "python -m csscompressor {{ fiw_login_path }}/css/main.css > {{ fiw_login_path }}/build/bundle.css"
+  shell: "python -m csscompressor {{ fiw_path }}/css/main.css > {{ fiw_path }}/build/bundle.css"
 
 - name: Add theme.css to CSS build
-  shell: "python -m csscompressor {{ fiw_login_path }}/themes/{{ fiw_login_theme }}/css/theme.css >> {{ fiw_login_path }}/build/bundle.css"
+  shell: "python -m csscompressor {{ fiw_path }}/themes/{{ fiw_theme }}/css/theme.css >> {{ fiw_path }}/build/bundle.css"
 
 - name: Prepare bundle.js (jquery)
-  shell: "slimit {{ fiw_login_path }}/js/jquery-1.6.4.min.js > {{ fiw_login_path }}/build/bundle.js"
+  shell: "slimit {{ fiw_path }}/js/jquery-1.6.4.min.js > {{ fiw_path }}/build/bundle.js"
 
 - name: Add jquery.rss.js to bundle.js
-  shell: "slimit {{ fiw_login_path }}/js/jquery.rss.js >> {{ fiw_login_path }}/build/bundle.js"
+  shell: "slimit {{ fiw_path }}/js/jquery.rss.js >> {{ fiw_path }}/build/bundle.js"
 
 - name: Add moment.min.js to bundle.js
-  shell: "slimit {{ fiw_login_path }}/js/moment.min.js >> {{ fiw_login_path }}/build/bundle.js"
+  shell: "slimit {{ fiw_path }}/js/moment.min.js >> {{ fiw_path }}/build/bundle.js"
 
 - name: Add main.js to bundle.js
-  shell: "slimit {{ fiw_login_path }}/js/main.js >> {{ fiw_login_path }}/build/bundle.js"
+  shell: "slimit {{ fiw_path }}/js/main.js >> {{ fiw_path }}/build/bundle.js"
 
 - name: Minify index.html
-  shell: "htmlmin {{ fiw_login_path }}/index.html {{ fiw_login_path }}/index.html"
+  shell: "htmlmin {{ fiw_path }}/index.html {{ fiw_path }}/index.html"

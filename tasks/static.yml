@@ -1,25 +1,25 @@
 - name: Copy static files
   copy:
     src: ./files/
-    dest: "{{ fiw_login_path }}"
+    dest: "{{ fiw_path }}"
 
 - name: Copy theme
   copy:
-    src: "{{ playbook_dir }}/themes/{{ fiw_login_theme }}"
-    dest: "{{ fiw_login_path }}/themes"
-  when: fiw_login_theme != "default"
+    src: "{{ playbook_dir }}/themes/{{ fiw_theme }}"
+    dest: "{{ fiw_path }}/themes"
+  when: fiw_theme != "default"
 
-- name: "create {{ fiw_login_path }}/build"
+- name: "create {{ fiw_path }}/build"
   file:
-    path: "{{ fiw_login_path }}/build"
+    path: "{{ fiw_path }}/build"
     state: directory
 
 - name: Build main.js
   template:
     src: ../templates/main.js
-    dest: "{{ fiw_login_path }}/js/main.js"
+    dest: "{{ fiw_path }}/js/main.js"
 
 - name: Build html page
   template:
     src: ../templates/index.html
-    dest: "{{ fiw_login_path }}/index.html"
+    dest: "{{ fiw_path }}/index.html"

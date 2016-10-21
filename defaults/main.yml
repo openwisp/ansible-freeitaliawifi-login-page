@@ -1,15 +1,15 @@
-fiw_login_path: /var/www/freeitaliawifi-login-page
-fiw_login_theme: default
-fiw_login_title: WiFi Login
-fiw_login_menu:
+fiw_path: /var/www/freeitaliawifi-login-page
+fiw_theme: default
+fiw_title: WiFi Login
+fiw_menu:
   - text_it: Free ItaliaWifi
     text_en: Free ItaliaWifi
     href: http://www.freeitaliawifi.it
   - text_it: OpenWISP
     text_en: OpenWISP
     href: http://openwisp.org
-fiw_login_form_action: null
-fiw_login_logo2: false
+fiw_form_action: null
+fiw_logo2: false
 fiw_signup: null
 fiw_reset_password: null
 fiw_manage_account: null

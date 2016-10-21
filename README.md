@@ -89,7 +89,7 @@ Create a new playbook file `playbook.yml` **on your local machine** with the fol
   roles:
     - openwisp.freeitaliawifi-login-page
   vars:
-    fiw_login_path: /var/www/freeitaliawifi-login-page
+    fiw_path: /var/www/freeitaliawifi-login-page
 ```
 
 This setting will deploy a very basic version of the login page with the minimum feature set activated.
@@ -122,7 +122,7 @@ The `--ask-sudo-pass` argument will need the `sshpass` program.
 You can remove `-k` and `--ask-sudo-pass` if your public SSH key is installed on the server.
 
 When the playbook is done running the login page will be built and deployed at the location specified
-in ``fiw_login_path``, which by default is ``/var/www/freeitaliawifi-login-page``.
+in ``fiw_path``, which by default is ``/var/www/freeitaliawifi-login-page``.
 
 Upgrading
 =========
@@ -146,13 +146,13 @@ Below are listed all the variables you can customize.
     - openwisp.freeitaliawifi-login-page
   vars:
     # location of the deployment
-    fiw_login_path: /var/www/freeitaliawifi-login-page
+    fiw_path: /var/www/freeitaliawifi-login-page
     # theme (more on how to create your theme in the next section)
-    fiw_login_theme: default
+    fiw_theme: default
     # <title> value
-    fiw_login_title: WiFi Login
-    # links in main menu, set as empty list to disable (eg: "fiw_login_menu: []")
-    fiw_login_menu:
+    fiw_title: WiFi Login
+    # links in main menu, set as empty list to disable (eg: "fiw_menu: []")
+    fiw_menu:
       - text_it: Free ItaliaWifi
         text_en: Free ItaliaWifi
         href: http://www.freeitaliawifi.it
@@ -160,9 +160,9 @@ Below are listed all the variables you can customize.
         text_en: OpenWISP
         href: http://openwisp.org
     # form action, if you don't set this variable your login form will probably not work
-    fiw_login_form_action: null
+    fiw_form_action: null
     # if set to true, a second logo (images/logo2.png) will be displayed just before the login form
-    fiw_login_logo2: false
+    fiw_logo2: false
     # signup link
     fiw_signup: null
     # reset password link
@@ -231,7 +231,7 @@ In order to create your theme, you must add the custom files to your inventory.
 
 For example, the following paragraphs illustrate to create a theme named ``mycustomtheme``.
 
-**Step 1**: set ``fiw_login_theme`` to ``mycustomtheme``.
+**Step 1**: set ``fiw_theme`` to ``mycustomtheme``.
 
 **Step 2**: create a directory layout like the one shown below.
 
@@ -249,7 +249,7 @@ For example, the following paragraphs illustrate to create a theme named ``mycus
 ```
 
 ``theme.css`` contains your CSS customizations, ``logo1.png`` contains your main logo while ``logo2.png``
-is an optional logo that is displayed before the login form only if the variable ``fiw_login_logo2``
+is an optional logo that is displayed before the login form only if the variable ``fiw_logo2``
 is set to ``true``.
 
 Any additional image used in elsewhere (eg: ``fiw_related_links``) can be stored in the themes dir.
@@ -262,7 +262,7 @@ won't be able to follow the links on your page.
 
 Pay special attention to the domains used in the following variables:
 
-* ``fiw_login_menu``
+* ``fiw_menu``
 * ``fiw_signup``
 * ``fiw_reset_password``
 * ``fiw_manage_account``
