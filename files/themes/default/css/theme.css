@@ -2,6 +2,7 @@
     background-color: #ccc;
     color: #fff;
 }
+.overlay{ background-color: #666 }
 
 body, #menu, #footer{ background-color: #555; color: #fff }
 .box{ background-color: #eee; color: #000 }
