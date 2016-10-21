@@ -14,7 +14,7 @@ fiw_signup: null
 fiw_reset_password: null
 fiw_manage_account: null
 fiw_pfsense_zone: null
-fiw_redirurl: http://www.cittametropolitanaroma.gov.it/
+fiw_redirurl: http://openwisp.org
 fiw_hidden_fields:
   - name: zone
     value: "{{ fiw_pfsense_zone}}"
