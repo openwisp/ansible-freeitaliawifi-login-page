@@ -1,7 +1,7 @@
 ansible-freeitaliawifi-login-page
 =================================
 
-[![Galaxy](http://img.shields.io/badge/galaxy-openwisp.freeitaliawifi-login-page-blue.svg?style=flat-square)](https://galaxy.ansible.com/openwisp/ansible-freeitaliawifi-login-page/)
+[![Galaxy](http://img.shields.io/badge/galaxy-openwisp.freeitaliawifi--login--page-blue.svg?style=flat-square)](https://galaxy.ansible.com/openwisp/freeitaliawifi-login-page/)
 
 This ansible role makes it easy to deploy and upgrade of the standard login page for Free ItaliaWifi federated networks.
 
