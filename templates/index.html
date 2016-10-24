@@ -72,6 +72,10 @@
                                tabindex="1" name="auth_user" required>
                     </p>
                     <p>
+                        <label class="t">Password</label>
+                        <input type="password" maxlength="32" size="32" tabindex="3" name="auth_pass" required>
+                    </p>
+                    <p>
                         <label>
                             <span class="t">Free ItaliaWiFi</span>
                             <a href="javascript:void(0)" id="help-fiw" class="t">what's this?</a>
@@ -81,10 +85,6 @@
                                 {{ fiw_default_realm.label }}
                             </option>
                         </select>
-                    </p>
-                    <p>
-                        <label class="t">Password</label>
-                        <input type="password" maxlength="32" size="32" tabindex="3" name="auth_pass" required>
                     </p>
                     <p class="center">
                         <button type="submit" class="t" name="accept" tabindex="4">Log in</button>
