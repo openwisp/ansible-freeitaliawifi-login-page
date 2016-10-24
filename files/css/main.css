@@ -139,8 +139,13 @@ input, select{
 #social img{ margin-right: 15px }
 #social{ margin-bottom: -5px !important }
 
-#related { text-align: center }
-#related a{ margin-right: 10px; text-decoration: none }
+#related { margin-top: -10px; text-align: center }
+#related a{
+    display: inline-block;
+    margin-right: 10px;
+    margin-top: 10px;
+    text-decoration: none
+}
 
 #help-fiw{
     font-weight: bold;
