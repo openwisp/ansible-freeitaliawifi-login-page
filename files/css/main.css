@@ -88,6 +88,7 @@ a.button, button{
 #header .lang{ background-color: rgba(0, 0, 0, 0.2) }
 #menu li a:hover,
 .button:hover,
+button:hover,
 #header .lang:hover{ background-color: rgba(0, 0, 0, 0.5) }
 .active{
     cursor: default !important;
@@ -159,6 +160,8 @@ input, select{
 .date{ font-size: 13px; font-style: italic }
 
 #footer{ line-height: 25px }
+#content a:hover,
+#footer a:hover{ text-decoration: none }
 
 #publicwifi p{
     width: 50%;
