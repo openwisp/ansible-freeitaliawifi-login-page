@@ -217,7 +217,7 @@ that explains its usage.
     # link to EULA/terms of service
     fiw_eula: "#"
     # list of Free ItaliaWifi networks
-    fiw_realm_json: https://opendata.publicwifi.it/freeitaliawifi/realms.json
+    fiw_realm_json: https://ixwifi.cittametropolitanaroma.gov.it/fiw.json
     # default realm, must match one of the realms present in "fiw_realm_json"
     fiw_default_realm:
         label: WiFi esempio

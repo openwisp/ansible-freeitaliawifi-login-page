@@ -47,7 +47,7 @@ fiw_related_links:
     alt: Cineca
 fiw_privacy: "#"
 fiw_eula: "#"
-fiw_realm_json: https://opendata.publicwifi.it/freeitaliawifi/realms.json
+fiw_realm_json: https://ixwifi.cittametropolitanaroma.gov.it/fiw.json
 fiw_default_realm:
     label: WiFi esempio
     value: wifiesempio.it
