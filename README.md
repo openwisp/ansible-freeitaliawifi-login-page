@@ -3,19 +3,18 @@ ansible-freeitaliawifi-login-page
 
 [![Galaxy](http://img.shields.io/badge/galaxy-openwisp.freeitaliawifi--login--page-blue.svg?style=flat-square)](https://galaxy.ansible.com/openwisp/freeitaliawifi-login-page/)
 
-This ansible role makes it easy to deploy and upgrade of the standard login page for Free ItaliaWifi federated networks.
+This ansible role makes it easy to deploy and upgrade the standard login page for Free ItaliaWifi federated networks.
 
-By following the instructions in this repository you will be able to define
-the parts that make your login page unique (logo, RSS feeds, colors, signup links, ecc.) while retaining
-the main structure of the page intact in order to upgrade easily over time.
+By following the instructions in this repository you will be able to define the parts that make
+your login page unique (logo, RSS feeds, colors, signup links, ecc.) while retaining the main
+structure of the page intact in order to upgrade easily over time.
 
-Tested on **debian** and **ubuntu**.
+This role was tested on **debian** and **ubuntu** systems.
 
 Usage (tutorial)
 ================
 
-If you don't know how to use ansible, don't panic, this procedure will
-guide you step by step.
+If you don't know how to use ansible, don't panic, this procedure will guide you step by step.
 
 If you already know how to use ansible, you can skip this section and jump straight to the
 "Install this role" section.
@@ -32,8 +31,8 @@ this machine must be able to SSH into the production server.
 Install ansible
 ---------------
 
-Install ansible **on your local machine** (not the production server!) if you haven't done already, there are various ways in
-which you can do this, but we prefer to use the official python package manager, eg:
+Install ansible **on your local machine** (not the production server!) if you haven't done already, there are various ways in which you can do this, but we prefer to use the official python package
+manager, eg:
 
     sudo pip install ansible
 
@@ -94,9 +93,10 @@ Create a new playbook file `playbook.yml` **on your local machine** with the fol
 
 This setting will deploy a very basic version of the login page with the minimum feature set activated.
 
-The default path of the deployment is ``/var/www/freeitaliawifi-login-page``
+The default path of the deployment is ``/var/www/freeitaliawifi-login-page`` but it can be changed
+by setting the ``fiw_path`` variable.
 
-Later we will explain how to enable all the supported features.
+See the section [Role Variables](https://github.com/openwisp/ansible-freeitaliawifi-login-page#role-variables) to know how to use all the supported variables.
 
 At this stage your directory layout should look like the following:
 
@@ -134,10 +134,10 @@ It's even possible to set up the playbook to run periodically.
 Role variables
 ==============
 
-This role has many variables values that can be changed to best suit
-your needs.
+This role has many variables that can be changed to best suit your needs.
 
-Below are listed all the variables you can customize.
+Below are listed all the variables you can customize. Each variable is preceded by a comment
+that explains its usage.
 
 ```yaml
 - hosts: yourhost
@@ -227,13 +227,13 @@ Below are listed all the variables you can customize.
 Creating your own theme
 -----------------------
 
-In order to create your theme, you must add the custom files to your inventory.
+In order to create your theme, you must add its custom files to your inventory.
 
 For example, the following paragraphs illustrate to create a theme named ``mycustomtheme``.
 
 **Step 1**: set ``fiw_theme`` to ``mycustomtheme``.
 
-**Step 2**: create a directory layout like the one shown below.
+**Step 2**: ensure your directory layout looks like the one shown below:
 
 ```
 .
@@ -249,10 +249,10 @@ For example, the following paragraphs illustrate to create a theme named ``mycus
 ```
 
 ``theme.css`` contains your CSS customizations, ``logo1.png`` contains your main logo while ``logo2.png``
-is an optional logo that is displayed before the login form only if the variable ``fiw_logo2``
+is an optional logo that is displayed before the login form, but only if the variable ``fiw_logo2``
 is set to ``true``.
 
-Any additional image used in elsewhere (eg: ``fiw_related_links``) can be stored in the themes dir.
+Any additional image used elsewhere on the page (eg: ``fiw_related_links``) can be stored in the themes dir.
 
 Walled garden gotchas
 ---------------------
