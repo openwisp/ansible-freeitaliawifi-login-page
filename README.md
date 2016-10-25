@@ -103,7 +103,7 @@ At this stage your directory layout should look like the following:
 ```
 .
 ├── hosts
-└── site.yml
+└── playbook.yml
 ```
 
 Run the playbook
@@ -238,7 +238,7 @@ For example, the following paragraphs illustrate to create a theme named ``mycus
 ```
 .
 ├── hosts
-├── site.yml
+├── playbook.yml
 └── themes
     └── mycustomtheme
         ├── css
