@@ -1,6 +1,6 @@
 - name: Copy static files
   copy:
-    src: ./files/
+    src: ./
     dest: "{{ fiw_path }}"
 
 - name: Copy theme
